@@ -1,7 +1,7 @@
 # 🧠 TheraPy – Conversational Therapy Chatbot
 
 **Status:** 🛠 Under active development  
-**Technologien:** Python, Flask, Hugging Face Transformers, DialoGPT
+**Technologies:** Python, Flask, Hugging Face Transformers, DialoGPT
 
 TheraPy is a simple chatbot designed to interact with users in natural language and serve as a virtual companion in emotionally difficult moments. It combines a web-based Flask frontend with a conversational AI backend using a pre-trained model from Hugging Face.
 

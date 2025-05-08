@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TheraPy Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 40px;
+        }
+        .chat-box {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .message {
+            margin-bottom: 15px;
+        }
+        .user {
+            font-weight: bold;
+            color: #007BFF;
+        }
+        .bot {
+            font-weight: bold;
+            color: #28a745;
+        }
+        form {
+            margin-top: 20px;
+            text-align: center;
+        }
+        input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            font-size: 1em;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-box">
+        <h2>🧠 TheraPy – Dein Gesprächspartner</h2>
+        
+        {% for speaker, message in conversation %}
+            <div class="message">
+                <span class="{{ 'user' if speaker == 'You' else 'bot' }}">{{ speaker }}:</span>
+                {{ message }}
+            </div>
+        {% endfor %}
+        
+        <form method="post">
+            <input type="text" name="user_input" placeholder="Type your message..." required>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</body>
+</html>
